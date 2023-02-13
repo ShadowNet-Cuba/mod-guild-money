@@ -43,7 +43,7 @@ public:
             if (gfLootMultiplier < 1)
                 return;
 
-            uint32 money = (gold / membersInRange) * gfLootMultiplier / 100;
+            uint32 money = (gold / membersInRange) * gfLootMultiplier / 1000;
 
             if (money < 1)
                 return;
@@ -70,7 +70,7 @@ public:
         {
             if (Guild* guild = player->GetGuild())
             {
-                uint32 money = gold * gfLootMultiplier / 100;
+                uint32 money = gold * gfLootMultiplier / 1000;
 
                 if (money < 1 || gfLootMultiplier < 1)
                     return;
@@ -116,7 +116,7 @@ public:
                 return;
 
             uint32 playerLevel = player->getLevel();
-            uint32 money = quest->GetRewOrReqMoney(playerLevel) * gfQuestMultiplier / 100;
+            uint32 money = quest->GetRewOrReqMoney(playerLevel) * gfQuestMultiplier / 1000;
 
             if (money < 1)
                 return;
